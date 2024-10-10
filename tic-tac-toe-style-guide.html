@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="True">
+	<title>Tic Tac Toe</title>
+	<style>
+		/* Button background is blue with a black border*/
+		button {
+			background-color: #3498db;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			font-size: 20px;
+			color: white;
+			vertical-align: middle;
+			border: 0px;
+		}
+
+		/* Styles the table cells to look like a tic-tac-toe grid */
+		table td {
+			text-align: center;
+			vertical-align: middle;
+			padding: 0px;
+			margin: 0px;
+			width: 75px;
+			height: 75px;
+			font-size: 20px;
+			border: 3px solid #040404;
+			color: white;
+		}
+
+		/* This shows a darker blue background when the mouse hovers over the buttons */
+		button:hover,
+		input[type="submit"]:hover,
+		button:focus,
+		input[type="submit"]:focus {
+			background-color: #04469d;
+			text-decoration: none;
+			outline: none;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Tic Tac Toe</h1>
+	<p>Turn: X</p>
+
+	<!-- Note the name of each button is different - keep these names if you want to use the provided functions -->
+	<form method="POST" action="tic-tac-toe.php">
+	<table>
+		<tr>
+			<td>
+				<button type="submit" name="1-1" value="X">X</button>
+			</td>
+			<td>
+				<button type="submit" name="2-1" value="X">X</button>
+			</td>
+			<td>
+				<button type="submit" name="3-1" value="X">X</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button type="submit" name="1-2" value="X">X</button>
+			</td>
+			<td>
+				<button type="submit" name="2-2" value="X">X</button>
+			</td>
+			<td>
+				<button type="submit" name="3-2" value="X">X</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button type="submit" name="1-3" value="X">X</button>
+			</td>
+			<td>
+				<button type="submit" name="2-3" value="X">X</button>
+			</td>
+			<td>
+				<button type="submit" name="3-3" value="X">X</button>
+			</td>
+		</tr>
+	</table>
+
+	<p>When a player makes a selection, the button in that spot is replaced with their choice with X in green and O in red. When it is O's turn the buttons turn to O</p>
+	<table>
+		<tr>
+			<td style="background-color:green;">
+				<p>X</p>
+			</td>
+			<td>
+				<button type="submit" name="2-1" value="O">O</button>
+			</td>
+			<td>
+				<button type="submit" name="3-1" value="O">O</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button type="submit" name="1-2" value="O">O</button>
+			</td>
+			<td style="background-color:green;">
+				<p>X</p>
+			</td>
+			<td style="background-color:red;">
+				<p>O</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button type="submit" name="1-3" value="O">O</button>
+			</td>
+			<td>
+				<button type="submit" name="2-3" value="O">O</button>
+			</td>
+			<td>
+				<button type="submit" name="3-3" value="O">O</button>
+			</td>
+		</tr>
+	</table>
+
+
+	<p>When there is a winner, all unchosen cells are blank and the game ends</p>
+	<p>The winner is X!!</p>
+	<table>
+		<tr>
+			<td style="background-color:green;">
+				<p>X</p>
+			</td>
+			<td style="background-color:red;">
+				<p>O</p>
+			</td>
+			<td>
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color:green;">
+				<p>X</p>
+			</td>
+			<td style="background-color:green;">
+				<p>X</p>
+			</td>
+			<td style="background-color:red;">
+				<p>O</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color:green;">
+				<p>O</p>
+			</td>
+			<td style="background-color:red;">
+				<p>O</p>
+			</td>
+			<td>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
